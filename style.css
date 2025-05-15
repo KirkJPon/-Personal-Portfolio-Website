@@ -1,18 +1,288 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-header {
-  background: #333;
-  color: white;
-  padding: 1rem;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-nav a {
-  color: white;
-  margin-right: 15px;
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #2a2a2a;
+  padding: 2rem 1rem;
+  width: 250px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
   text-decoration: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
-main {
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #444;
+  color: #ffffff;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
   padding: 2rem;
+  background-color: #1f1f1f;
+}
+
+/* General Page Styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  color: #ddd;
+}
+
+p {
+  margin: 0.5rem 0 1.5rem;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Project & Blog Sections */
+.project,
+.blog-post,
+.experience {
+  margin-bottom: 2rem;
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover,
+.blog-post:hover,
+.experience:hover {
+  transform: scale(1.02);
+}
+
+/* Form Styling */
+form {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #ddd;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #444;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form-message {
+  margin-top: 1rem;
+  color: #00ff99;
+}
+
+/* Contact Info */
+.contact-details {
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .sidebar ul li {
+    margin: 0.5rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-card {
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #66ff99;
+}
+
+.skill-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.work-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience {
+  background-color: #2b2b2b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 5px solid #4caf50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience:hover {
+  transform: translateY(-7px);
+  border-color: #66ff99;
+  box-shadow: 0 8px 20px rgba(102, 255, 153, 0.7);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+}
+
+.experience-header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.date {
+  font-style: italic;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.experience p {
+  margin: 0.4rem 0 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.experience ul {
+  list-style-type: disc;
+  margin-left: 1.2rem;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.experience ul li {
+  margin-bottom: 0.4rem;
 }

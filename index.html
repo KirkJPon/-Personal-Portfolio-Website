@@ -1,26 +1,71 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kirk Justine Pontilla - Portfolio</title>
+  <title>Home - Kirk Justine Pontilla</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="work.html">Work Experience</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>Kirk Justine Pontilla</h2>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="work.html">Work Experiences</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul>
     </nav>
-  </header>
-  <main>
-    <h2>Hi, I'm Kirk!</h2>
-    <p>This is my personal website.</p>
-  </main>
+
+    <main class="content">
+      <section class="about">
+        <h1>Hello! I'm Kirk</h1>
+        <p>
+          I’m a passionate web developer and tech enthusiast currently pursuing a degree in Information Technology.
+          I love building web applications that are not only functional but also visually engaging. My goal is to create meaningful digital experiences and continually grow in the tech industry.
+        </p>
+        <p>
+          Whether I’m debugging code, designing user interfaces, or exploring new technologies, I’m always looking for ways to improve my craft. I’m currently focusing on sharpening my frontend development skills with a keen interest in user experience and responsive design.
+        </p>
+        <p>
+          Outside of tech, I enjoy playing video games, bonding with my pets, and learning about new innovations in AI and programming.
+        </p>
+      </section>
+
+      <section class="skills-section">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>HTML & CSS</h3>
+            <p>Strong understanding of semantic HTML and modern CSS practices, including Flexbox and Grid for responsive design.</p>
+          </div>
+          <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Capable of writing clean, functional JS code and building interactive interfaces and components.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Comfortable using Git for version control and collaborating on projects using GitHub repositories.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Responsive Design</h3>
+            <p>Skilled in creating mobile-friendly layouts and ensuring a consistent experience across devices.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Team Collaboration</h3>
+            <p>Great communicator and team player; experienced in group projects and agile collaboration.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Problem Solving</h3>
+            <p>Adept at debugging issues, finding efficient solutions, and learning new tools as needed.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
